@@ -1,0 +1,201 @@
+### Why we use Maven ?########   Cucumber frameworkk
+
+1 It help to build our project folder and package structure
+2: Help to manage depenecnies
+3: You can run your project from the command line
+pom.xml is the heart of teh project
+www.mvnrepository.com  get depedencies
+
+##the src/test is where we do our work
+
+## we use the properties in the pom.xml to add the compilier
+<properties>
+
+##
+
+Create a new maven project default without an artifact
+## GroupID : is the company name e.g com.company
+## ArtifactID: is the the project name e.g ecommerces
+
+############################# SRC/TEST/DIRECTORY ############
+
+in the  src/test directory create packages
+1:com.company.pages / to using page oobject design pattern to design store our page elements
+---Pageinitializer.java /every pages in the project will be initialize here
+
+
+2:com.company.runner/ keep our runner files here
+--TestRunner.java
+
+###
+3:com.company.steps/ here we keep our step defination
+
+###
+4:com.company.testBase/ here we keep our base class
+--- baseClass.java
+---
+###
+5:com.company.Utilities/
+--- configReader.java
+--- ExecelUtility.Java
+--- Constant.java
+--- commonMethods.java // methos store click action and other action
+
+here we keep all our utilities reader, helper and any other files
+
+
+
+
+
+in the resources directory create other folders like
+#Driver
+#configs: config.properties
+#testdata : for your data/ excel
+#features: cucumber feature/ eg.login.feature
+
+
+
+################ Tools used in this Project ###########
+* Java Programming Language
+* IntelliJIDEA
+* Maven Project
+* Selenium WebDriver
+* TestNG
+* Page Object Model (POM)
+* Data driven
+* HYBRID
+
+//tagname[@attribute = "value"]
+//*[contains(text(),'ABC')]
+e.g contact us link   =  //*[contains(text(),'Contact Us')]
+
+and  / or
+
+demo.ideasgolive.xyz
+
+//locators on the page to test
+
+logo = //img[@class="default-logo"]
+homePage = //li[@id="menu-item-371"]
+contact = //li[@id="menu-item-372"]
+
+# #account modal
+
+login button = //a[@href="#account-modal"]
+username= //input[@id="user_login"]
+password = //input[@id="user_pass"]
+loginButton = //button[@name="wp-submit"]
+
+##LABEL TO VERIFFY AFTER LOGIN
+
+Label  "My Account"
+or check that "poject Demo" pagecontain
+
+
+
+//    @FindBy(id = "username")
+//    WebElement username;
+//
+//    @FindBy(id = "login")
+//    WebElement btnLogin;
+
+
+###
+
+By usernaame = By.id ="";
+
+
+xpath for the 4 images on the home page
+imgage = //img[@class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail loaded"]
+
+#### the Flow
+Page Initializer extends the base class and you instantiate your pages in the page initializer
+the common methods class can extends baseclass
+pages can extends common methods
+
+##### THE FLOW ###
+
+>>> Pages extends the common methods
+>>> CommonMethods Extends the PageInitializer
+>>> BaseClass contains drivers and  other stuff
+>>> PageInitializer Extends the BaseClass
+>>> Test extends the PageInitializer
+
+
+
+
+###########################################
+
+
+Steps ####
+Step1 : Create a maven project in Intellij
+Step2: Add dependencies to pom.xml
+Step3: Create folder structure and packages
+Step4: Create pages in page package and add locator and methods
+Step5 :Create other java pages in respective packages
+Step6: Create Tests and and add TestNg Annotations
+step 7 Run Tests
+
+#################################
+
+
+#### Tools used in this demo  ############
+
+1: IntelliJIdea
+1: Java
+2: MAVEN
+3: Selenium WebDriver
+3: TestNg
+4: Page Object Model( Page Factory ) Design Pattern
+5: Hybrid Framework
+6: Data Driven
+7: Logback logs
+
+others
+apache poi api
+extents report
+kibana
+jSON TO generate
+Jenkins to trigger the build
+Git repo to maintain code
+
+the framework will support CI/CD
+
+
+
+
+###########################
+
+File > New > Project > Maven >
+check create from achetype and choose maven-achetype-quickstart . click on NEXT
+
+
+
+What is Maven? #
+
+Apache Maven is a software project management and comprehension tool that can manage a project’s build, reporting, and documentation from a central piece of information, making it a complete build lifecycle framework
+
+
+Creating maven from the cammand line :
+
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+
+
+    archetypeArtifactId: a starter template to use for creating the basic project structure.
+    groupId, artifactId, and version: this combination enables you to identify an artifact uniquely. groupId is mostly the company’s domain reversed. For example, groupId of example.com is created as com.example. Version can be in format as <major.version>.<minor.version>.<patch.number>-<RELEASE/SNAPSHOT>. For example, 1.0.0-SNAPSHOT or 1.0.0-RELEASE. Please follow the link for more information.
+
+
+The framework should be able to read the configurable parameters from any of the sources and be able to change the behaviour of the features provided by the framework.
+
+
+Logback #
+
+Logback is intended as a successor to the popular log4j project that is used for logging to console and file. The main advantage of using logback over log4j is that its internals has been re-written to perform about ten times faster and has a smaller memory footprint as well.
+
+
+
+What is POM? #
+
+POM (Page Object Model) is a design pattern that is used in selenium test automation for organizing the helper code for maintainability and reducing code duplication. A page object or a page class is basically a representation of all or some of the actions and operations which can be performed on that page of your application and also acts as an interface to a page of your application under test.
+
