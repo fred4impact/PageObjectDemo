@@ -20,6 +20,8 @@ public class ContactUsTest extends PageInitializer {
         LOG.info("Enter Your subject");
         CommonMethods.sendInput(contact.yourMessage, "Message Message Message");
         LOG.info("Enter your country");
+        CommonMethods.clickButton(contact.btnSendMessage);
+        LOG.info("Submit button Click ");
     }
 
 }
