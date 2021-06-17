@@ -1,4 +1,4 @@
-package Pages;
+package PageObjects;
 
 import Utilities.CommonMethods;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ public class ContactUsPage extends CommonMethods {
 
 
     public ContactUsPage(WebDriver driver){
-     this.driver = driver;
+//     this.driver = driver;
      PageFactory.initElements(driver, this);
     }
 

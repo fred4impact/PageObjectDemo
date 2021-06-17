@@ -63,7 +63,7 @@ in the resources directory create other folders like
 * TestNG
 * Page Object Model (POM)
 * Data driven
-* HYBRID
+* Hybrid Framework
 
 //tagname[@attribute = "value"]
 //*[contains(text(),'ABC')]
@@ -115,7 +115,7 @@ pages can extends common methods
 
 ##### THE FLOW ###
 
->>> Pages extends the common methods
+>>> PageObjects extends the common methods
 >>> CommonMethods Extends the PageInitializer
 >>> BaseClass contains drivers and  other stuff
 >>> PageInitializer Extends the BaseClass
@@ -198,4 +198,12 @@ Logback is intended as a successor to the popular log4j project that is used for
 What is POM? #
 
 POM (Page Object Model) is a design pattern that is used in selenium test automation for organizing the helper code for maintainability and reducing code duplication. A page object or a page class is basically a representation of all or some of the actions and operations which can be performed on that page of your application and also acts as an interface to a page of your application under test.
+
+
+
+Execution
+pom.xml
+TestNG.xml
+Jenkins
+Maven run.bat
 

@@ -26,7 +26,7 @@ public class TestBase {
 
     // Instance of the config reader
     ConfigsReader configsreader = new ConfigsReader();
-    private static final Logger LOG = LoggerFactory.getLogger(TestBase.class);
+    public static final Logger LOG = LoggerFactory.getLogger(TestBase.class);
     // logback intstance
 
     public String baseURL=configsreader.getURL();

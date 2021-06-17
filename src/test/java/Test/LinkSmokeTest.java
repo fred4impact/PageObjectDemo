@@ -18,7 +18,7 @@ public class LinkSmokeTest extends TestBase {
     @Test
     public void TestLink() {
         List<WebElement> links=driver.findElements(By.tagName("a"));
-        System.out.println("Total links are "+links.size());
+        System.out.println("*** Total links on the application is    "+links.size());
 
         for(int i=0;i<links.size();i++)
         {

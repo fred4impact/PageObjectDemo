@@ -1,7 +1,6 @@
 package Utilities;
 
-import Base.TestBase;
-import Pages.PageInitializer;
+import PageObjects.PageInitializer;
 import org.openqa.selenium.WebElement;
 
 public class CommonMethods extends PageInitializer {

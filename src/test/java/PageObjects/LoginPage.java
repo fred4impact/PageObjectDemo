@@ -1,4 +1,4 @@
-package Pages;
+package PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,8 +48,9 @@ public class LoginPage {
     }
 
 
-    public void clickBtnLogin(){
+    public DashBoard clickBtnLogin(){
         loginButton.click();
+        return new DashBoard(driver);
     }
 
 

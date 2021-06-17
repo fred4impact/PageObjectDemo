@@ -13,6 +13,7 @@
 
         <classes>
             <class name="Test.LoginPageTest" />
+<!--            <class name="Test.LoginPageTest" />-->
             <!--  <class name="" />-->
 <!--            <class name="Test.LinkSmokeTest" />-->
         </classes>
