@@ -12,8 +12,8 @@
         <parameter name="browser" value="chrome" />
 
         <classes>
-            <class name="Test.LoginPageTest" />
 <!--            <class name="Test.LoginPageTest" />-->
+            <class name="Test.ContactUsTest" />
             <!--  <class name="" />-->
 <!--            <class name="Test.LinkSmokeTest" />-->
         </classes>

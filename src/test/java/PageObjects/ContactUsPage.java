@@ -3,34 +3,42 @@ package PageObjects;
 import Utilities.CommonMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ContactUsPage extends CommonMethods {
 
-    WebDriver driver = null;
+   private  WebDriver driver = null;
 
 
     public ContactUsPage(WebDriver driver){
-//     this.driver = driver;
-     PageFactory.initElements(driver, this);
+      this.driver = driver;
+      PageFactory.initElements(driver, this);
     }
 
     @FindBy(name = "your-name")
-    WebElement yourName;
+    @CacheLookup
+    public WebElement yourName;
 
     @FindBy(name = "your-email")
-    WebElement yourEmail;
+    @CacheLookup
+    public WebElement yourEmail;
 
     @FindBy(name="your-subject")
-    WebElement yourSubject;
+    @CacheLookup
+    public WebElement yourSubject;
 
     @FindBy(name="your-message")
-    WebElement yourMessage;
+    @CacheLookup
+    public WebElement yourMessage;
 
 
     @FindBy(xpath = "//input[@value=\'Send Message\']")
-    WebElement btnSendMessage;
+    @CacheLookup
+    public WebElement btnSendMessage;
+
+
 
 
 }

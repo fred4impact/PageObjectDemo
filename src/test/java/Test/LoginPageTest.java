@@ -18,7 +18,7 @@ public class LoginPageTest extends PageInitializer {
 
         Initialize(); // here i called the initializer class
         LOG.info(" +++ Page initialization +++");
-        LoginPage login = home.clickLoginModal(); // call the home page to link to login
+        login = home.clickLoginModal(); // call the home page to link to login
         LOG.info("+++ Robot clicks on login Page +++");
         login.setUsername(username); // this username is coming from the config properties
         LOG.info(" Robot enter Username");

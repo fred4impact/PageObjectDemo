@@ -2,6 +2,7 @@ package PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -12,13 +13,16 @@ public class HomePage {
     WebDriver driver = null ;
 
     @FindBy(xpath = "//a[@href=\'#account-modal\']")
+    @CacheLookup
     WebElement loginModal;
 
     @FindBy(xpath = "//*[contains(text(),'Contact Us')]")
+    @CacheLookup
     WebElement contactUsLink;
 
     // the xpath for the list of feature products on the home page
     @FindBy(xpath = "//img[@class=\'attachment-woocommerce_thumbnail size-woocommerce_thumbnail loaded\']")
+    @CacheLookup
     List<WebElement> featuredProducts;
 
 
