@@ -1,7 +1,9 @@
 package Base;
 
 import Utilities.ConfigsReader;
+import Utilities.Constants;
 import com.google.common.io.Files;
+import com.thoughtworks.qdox.model.expression.Constant;
 import javafx.scene.Camera;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -59,7 +61,8 @@ public class TestBase {
         }
 
 
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+//      driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Constants.EXPLICIT_WAIT_TIME, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(baseURL);
         LOG.info("** Open Base Url **");
