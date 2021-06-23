@@ -2,10 +2,9 @@ package PageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.*;
 
+import javax.xml.xpath.XPath;
 import java.util.List;
 
 public class HomePage {
@@ -25,11 +24,28 @@ public class HomePage {
     @CacheLookup
     List<WebElement> featuredProducts;
 
+    @FindBy(xpath = "//*[@class=\'default-logo\']")
+    @CacheLookup
+    private WebElement logo ;
+
 
     public HomePage(WebDriver driver){
        this.driver = driver;
        PageFactory.initElements(driver, this);
     }
+
+
+    public WebElement appLogo(){
+        return logo;
+    }
+
+
+
+
+
+
+
+
 
   // this method click on the login link on home page
     public LoginPage clickLoginModal(){

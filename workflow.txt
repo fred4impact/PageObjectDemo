@@ -131,8 +131,8 @@ Steps ####
 Step1 : Create a maven project in Intellij
 Step2: Add dependencies to pom.xml
 Step3: Create folder structure and packages
-Step4: Create pages in page package and add locator and methods
-Step5 :Create other java pages in respective packages
+Step4: Create pages in pageObjects package and add locator and methods
+Step5 :Create other java page in respective packages eg .configuration and resource folder can be directy under your project root folder the other components should be under the  sr/test/java/package_name  Base, Test, TestData, Utilities
 Step6: Create Tests and and add TestNg Annotations
 step 7 Run Tests
 

@@ -14,10 +14,14 @@ public class LoginPageTest extends PageInitializer {
 
     @Test(description = "test valid user login", priority = 1)
     public void UserLoginTest(){
-//        PageInitializer.Initialize();
-
         Initialize(); // here i called the initializer class
         LOG.info(" +++ Page initialization +++");
+
+        // here used a method in the common method called isDisplayed.
+        // this method is to verify logo is displayed on teh login page
+        Assert.assertTrue(CommonMethods.isDisplay(home.appLogo()));
+        LOG.info("*** logo is displayed *** ");
+
         login = home.clickLoginModal(); // call the home page to link to login
         LOG.info("+++ Robot clicks on login Page +++");
         login.setUsername(username); // this username is coming from the config properties
@@ -36,11 +40,7 @@ public class LoginPageTest extends PageInitializer {
               Assert.assertTrue(false);
           }
 
-//        System.out.println("+++++ Profile name is " +   );
-        // verify the my account title
-//        Assert.assertTrue(CommonMethods.isDisplay(""));
-
-        LOG.info("The current user porfile name is :" + profile.Bilarn.getText());
+         LOG.info("The current user porfile name is :" + profile.Bilarn.getText());
     }
 
 

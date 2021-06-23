@@ -4,17 +4,18 @@
 <suite name="PageObjectDemo">
 
 <!--    <listeners>-->
-<!--        <listener class-name="com.inetbanking.utilities.Reporting" />-->
+<!--        <listener class-name="PageObjectDemo.utilities.Reporting" />-->
 <!--    </listeners>-->
 
 
     <test name="PageObjectDemo Test">
+
         <parameter name="browser" value="chrome" />
 
         <classes>
-<!--            <class name="Test.LoginPageTest" />-->
-            <class name="Test.ContactUsTest" />
-            <!--  <class name="" />-->
+            <class name="Test.HomePageTest" />
+            <class name="Test.LoginPageTest" />
+<!--            <class name="Test.ContactUsTest" />-->
 <!--            <class name="Test.LinkSmokeTest" />-->
         </classes>
     </test>
